@@ -40,4 +40,13 @@ bot.on('callback_query:data', async (ctx) => {
 });
 
 bot.start();
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => res.send('Bot is running'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Веб-сервер слушает порт ${PORT}`));
+
 console.log('Бот запущен');
