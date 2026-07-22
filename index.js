@@ -28,7 +28,7 @@ bot.on('callback_query:data', async (ctx) => {
     state.service = value;
     userState[chatId] = state;
 
-    const keyboard = new InlineKeyboard().url('📅 Записаться в DIKIDI', dikidiLink);
+    const keyboard = new InlineKeyboard().webApp('📅 Записаться в DIKIDI', 'https://kiragnatyukk-dev.github.io/desktop-webapp-zhm/');
 
     await ctx.editMessageText(
       `Отлично! Услуга: ${value}\n\nНажмите кнопку ниже, чтобы завершить запись:`,
