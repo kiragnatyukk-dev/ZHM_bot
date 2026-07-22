@@ -28,12 +28,7 @@ bot.on('callback_query:data', async (ctx) => {
     state.service = value;
     userState[chatId] = state;
 
-<<<<<<< HEAD
     const keyboard = new InlineKeyboard().webApp('📅 Записаться в DIKIDI', 'https://kiragnatyukk-dev.github.io/desktop-webapp-zhm/');
-=======
-    const keyboard = new InlineKeyboard().webApp('📅 Записаться в DIKIDI','https://kiragnatyukk-dev.github.io/desktop-webapp-zhm/');
-
->>>>>>> 5b66e840060dcf4a7c482438e17d21936e9174aa
 
     await ctx.editMessageText(
       `Отлично! Услуга: ${value}\n\nНажмите кнопку ниже, чтобы завершить запись:`,
@@ -55,3 +50,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Веб-сервер слушает порт ${PORT}`));
 
 console.log('Бот запущен');
+ 
